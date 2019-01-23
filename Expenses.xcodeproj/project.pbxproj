@@ -8,13 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		9B49EFF221F9087200D9017D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B49EFF121F9087200D9017D /* AppDelegate.swift */; };
-		9B49EFF421F9087200D9017D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B49EFF321F9087200D9017D /* ViewController.swift */; };
 		9B49EFF721F9087200D9017D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B49EFF521F9087200D9017D /* Main.storyboard */; };
 		9B49EFFA21F9087200D9017D /* Expenses.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9B49EFF821F9087200D9017D /* Expenses.xcdatamodeld */; };
 		9B49EFFC21F9087400D9017D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9B49EFFB21F9087400D9017D /* Assets.xcassets */; };
 		9B49EFFF21F9087400D9017D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B49EFFD21F9087400D9017D /* LaunchScreen.storyboard */; };
 		9B49F00A21F9087400D9017D /* ExpensesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B49F00921F9087400D9017D /* ExpensesTests.swift */; };
 		9B49F01521F9087400D9017D /* ExpensesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B49F01421F9087400D9017D /* ExpensesUITests.swift */; };
+		9BF675D121F90BB2004A9476 /* Expense.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BF675D021F90BB2004A9476 /* Expense.swift */; };
+		9BF675D321F90EA7004A9476 /* ExpensesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BF675D221F90EA7004A9476 /* ExpensesViewController.swift */; };
+		9BF675D521F91690004A9476 /* ExpenseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BF675D421F91690004A9476 /* ExpenseTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,7 +39,6 @@
 /* Begin PBXFileReference section */
 		9B49EFEE21F9087200D9017D /* Expenses.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Expenses.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B49EFF121F9087200D9017D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		9B49EFF321F9087200D9017D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		9B49EFF621F9087200D9017D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9B49EFF921F9087200D9017D /* Expenses.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Expenses.xcdatamodel; sourceTree = "<group>"; };
 		9B49EFFB21F9087400D9017D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -49,6 +50,9 @@
 		9B49F01021F9087400D9017D /* ExpensesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ExpensesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B49F01421F9087400D9017D /* ExpensesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpensesUITests.swift; sourceTree = "<group>"; };
 		9B49F01621F9087400D9017D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9BF675D021F90BB2004A9476 /* Expense.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Expense.swift; sourceTree = "<group>"; };
+		9BF675D221F90EA7004A9476 /* ExpensesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpensesViewController.swift; sourceTree = "<group>"; };
+		9BF675D421F91690004A9476 /* ExpenseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,12 +104,14 @@
 			isa = PBXGroup;
 			children = (
 				9B49EFF121F9087200D9017D /* AppDelegate.swift */,
-				9B49EFF321F9087200D9017D /* ViewController.swift */,
 				9B49EFF521F9087200D9017D /* Main.storyboard */,
 				9B49EFFB21F9087400D9017D /* Assets.xcassets */,
 				9B49EFFD21F9087400D9017D /* LaunchScreen.storyboard */,
 				9B49F00021F9087400D9017D /* Info.plist */,
 				9B49EFF821F9087200D9017D /* Expenses.xcdatamodeld */,
+				9BF675D021F90BB2004A9476 /* Expense.swift */,
+				9BF675D221F90EA7004A9476 /* ExpensesViewController.swift */,
+				9BF675D421F91690004A9476 /* ExpenseTableViewCell.swift */,
 			);
 			path = Expenses;
 			sourceTree = "<group>";
@@ -259,7 +265,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9B49EFF421F9087200D9017D /* ViewController.swift in Sources */,
+				9BF675D521F91690004A9476 /* ExpenseTableViewCell.swift in Sources */,
+				9BF675D121F90BB2004A9476 /* Expense.swift in Sources */,
+				9BF675D321F90EA7004A9476 /* ExpensesViewController.swift in Sources */,
 				9B49EFFA21F9087200D9017D /* Expenses.xcdatamodeld in Sources */,
 				9B49EFF221F9087200D9017D /* AppDelegate.swift in Sources */,
 			);
